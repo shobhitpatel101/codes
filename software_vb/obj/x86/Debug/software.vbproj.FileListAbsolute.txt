@@ -1,0 +1,25 @@
+c:\users\pops\documents\visual studio 2010\Projects\software\software\bin\Debug\software.exe
+c:\users\pops\documents\visual studio 2010\Projects\software\software\bin\Debug\software.pdb
+c:\users\pops\documents\visual studio 2010\Projects\software\software\bin\Debug\software.xml
+c:\users\pops\documents\visual studio 2010\Projects\software\software\obj\x86\Debug\software.Form1.resources
+c:\users\pops\documents\visual studio 2010\Projects\software\software\obj\x86\Debug\software.Resources.resources
+c:\users\pops\documents\visual studio 2010\Projects\software\software\obj\x86\Debug\software.vbproj.GenerateResource.Cache
+c:\users\pops\documents\visual studio 2010\Projects\software\software\obj\x86\Debug\software.exe
+c:\users\pops\documents\visual studio 2010\Projects\software\software\obj\x86\Debug\software.xml
+c:\users\pops\documents\visual studio 2010\Projects\software\software\obj\x86\Debug\software.pdb
+c:\users\pops\documents\visual studio 2010\Projects\software\software\obj\x86\Debug\software.LoginForm1.resources
+C:\Users\POPS\documents\visual studio 2010\Projects\software\software\obj\x86\Debug\software.Form2.resources
+I:\software\software\obj\x86\Debug\software.exe
+I:\software\software\obj\x86\Debug\software.xml
+I:\software\software\obj\x86\Debug\software.pdb
+C:\Users\Shobhit\Desktop\software\software\obj\x86\Debug\software.exe
+C:\Users\Shobhit\Desktop\software\software\obj\x86\Debug\software.xml
+C:\Users\Shobhit\Desktop\software\software\obj\x86\Debug\software.pdb
+C:\Users\Shobhit\Desktop\software\software\bin\Debug\software.exe
+C:\Users\Shobhit\Desktop\software\software\bin\Debug\software.pdb
+C:\Users\Shobhit\Desktop\software\software\bin\Debug\software.xml
+C:\Users\Shobhit\Desktop\software\software\obj\x86\Debug\software.Form1.resources
+C:\Users\Shobhit\Desktop\software\software\obj\x86\Debug\software.Form2.resources
+C:\Users\Shobhit\Desktop\software\software\obj\x86\Debug\software.LoginForm1.resources
+C:\Users\Shobhit\Desktop\software\software\obj\x86\Debug\software.Resources.resources
+C:\Users\Shobhit\Desktop\software\software\obj\x86\Debug\software.vbproj.GenerateResource.Cache
