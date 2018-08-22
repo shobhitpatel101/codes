@@ -1,0 +1,86 @@
+// Example program
+#include <iostream>
+#include <string>
+#include<bits/stdc++.h>
+using namespace std;
+
+
+void lps(char pat[],int l[])
+{
+    int lt;
+    int i=1;
+    l[0]=0;
+    
+    while(i<strlen(pat))
+    {
+        if(pat[i]==pat[lt])
+        {
+            lt++;
+            l[i]=lt;
+            i++;
+        }
+        
+        else
+        {
+            if(lt!=0)
+            {
+                lt=l[lt-1];
+            }
+            else{
+                l[i]=0;
+                i++;
+            }
+        }
+    }
+}
+
+void kmap(char txt[],char pat[])
+{
+    int l[strlen(pat)];
+    lps(pat,l);
+    
+    
+    int i=0;
+    int j=0;
+    int m=strlen(pat);
+    
+    while(i<strlen(txt))
+    {
+        
+        if(txt[i]==pat[j])
+        {
+            i++;
+            j++;
+            
+        }
+         if(m==j)
+        {
+            cout<<"found:"<<i-j<<endl;
+            j=l[j-1];
+        }
+       
+        else if(i<strlen(txt) && pat[j]!=txt[i])
+        {
+           
+           if(j!=0)
+           j=l[j-1];
+           else
+           i++;
+        }
+        
+        
+    }
+    
+}
+
+
+int main()
+{
+char txt[]="abcdfabcdffcde";
+ char pat[] = "abc";
+ 
+ kmap(txt,pat);
+
+ return 0;
+ }
+
