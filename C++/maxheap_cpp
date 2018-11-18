@@ -1,0 +1,55 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+#define PB push_back
+#define FOR(i,n) for (int i=0; i<n; i++)
+
+void buildheap(int arr[],int n,int i)
+{
+    int lr=i;
+    int r=2*i+1;
+    int l=2*i+2;
+    
+    
+    
+    if(arr[r]>arr[lr]&&r<n)
+    {
+        lr=r;
+    }
+    if(arr[l]>arr[lr]&&l<n)
+    {
+        lr=l;
+    }
+    
+    if(lr!=i)
+    {
+       swap(arr[i],arr[lr]);
+       buildheap(arr,n,lr);
+    }
+}
+
+void minheap(int arr[],int n)
+{
+    for(int i=n/2-1;i>=0;i--)
+    {
+        buildheap(arr,n,i);
+        
+    }
+}
+
+int main()
+{ios_base::sync_with_stdio(false);
+cin.tie(NULL);
+
+int arr[]={2,3,1,4,1,3,4};
+int n=sizeof(arr)/sizeof(arr[0]);
+
+minheap(arr,n);
+
+for(int i=0;i<n;i++)
+cout<<arr[i]<<" , ";
+
+return 0;
+}
+

@@ -1,0 +1,90 @@
+// C++ program to count all paths from a 
+// source to a destination. 
+#include<bits/stdc++.h> 
+
+using namespace std; 
+
+// A directed graph using aadjacency list 
+// representation 
+class Graph 
+{ 
+	
+	// No. of vertices in graph 
+	int V; 
+	list<int> *adj; 
+	int count =0;
+    
+
+	// A recursive function 
+	// used by countPaths() 
+	
+public: 
+
+	// Constructor 
+	Graph(int V); 
+	void addEdge(int u, int v); 
+	int countPaths(int s, int d); 
+	void c1(int s ,int d,bool vis[]a);
+}; 
+
+Graph::Graph(int V) 
+{ 
+	this->V = V; 
+	adj = new list<int>[V]; 
+} 
+
+void Graph::addEdge(int u, int v) 
+{ 
+	
+	// Add v to u’s list. 
+	adj[u].push_back(v); 
+} 
+
+void Graph::c1(int s,int d,bool vis[])
+{
+    vis[s]=true;
+    
+    if(s==d)count++;
+    
+    else{
+        list<int>::iterator i; 
+        for (i = adj[s].begin(); i != adj[s].end(); ++i) 
+           {
+            if(!vis[*i])
+            {
+                vis[*i]=true;
+                c1(*i,d,vis);
+            }
+        }
+    }
+    vis[s]=false;
+}
+
+int Graph::countPaths(int s,int d)
+{
+    bool vis[V];
+    count=0;
+    memset(vis,false,sizeof(vis));
+    c1(s,d,vis);
+    
+    return count;    
+}
+// Driver Code 
+int main() 
+{ 
+	
+	// Create a graph given in the above diagram 
+	Graph g(4); 
+	g.addEdge(0, 1); 
+	g.addEdge(0, 2); 
+	g.addEdge(0, 3); 
+	g.addEdge(2, 0); 
+	g.addEdge(2, 1); 
+	g.addEdge(1, 3); 
+
+	int s = 2, d = 3; 
+	cout << g.countPaths(s, d); 
+
+	return 0; 
+} 
+

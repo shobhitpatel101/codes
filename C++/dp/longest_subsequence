@@ -1,0 +1,43 @@
+// Example program
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+int c=0;
+
+int calc(char a[],char b[],int n1,int n2)
+{c++;
+int i,j;
+int mt[n1+1][n2+1];
+
+for(i=0;i<=n1;i++)
+{
+    for(j=0;j<=n2;j++)
+    {
+        if(i==0||j==0)
+        mt[i][j]=0;
+        
+        else if(a[i]==b[j])
+        mt[i][j]=1+mt[i-1][j-1];
+        
+        else
+        mt[i][j]=max(mt[i-1][j],mt[i][j-1]);
+    }
+    
+    }
+    return mt[n1][n2];
+
+}
+
+int main()
+{
+ char a[] = "AGGTAB"; 
+  char b[] = "GXTXAYB"; 
+  
+int n1=strlen(a);
+int n2=strlen(b);
+
+int res=calc(a,b,n1,n2);
+cout<<res<<endl<<c<<endl;
+return 0;
+}
+
